@@ -10,6 +10,12 @@ LuaExpat
 LuaExpat is a SAX XML parser based on the Expat library. LuaExpat is free
 software and uses the same license as Lua 5.1.
 
+## Build
+
+```shell
+make LUA_V=jit-5.1 LUA_LDIR=/usr/local/share/lua/5.1 LUA_CDIR=/usr/local/lib/lua/5.1 LUA_INC=-I/usr/local/include/luajit-2.1 EXPAT_INC=-I/usr/local/opt/expat/include EXPAT_LIB="-L/usr/local/lib -lluajit-5.1 -L/usr/local/opt/expat/lib -lexpat"
+make LUA_V=jit-5.1 LUA_LDIR=/usr/local/share/lua/5.1 LUA_CDIR=/usr/local/lib/lua/5.1 LUA_INC=-I/usr/local/include/luajit-2.1 EXPAT_INC=-I/usr/local/opt/expat/include EXPAT_LIB="-L/usr/local/lib -lluajit-5.1 -L/usr/local/opt/expat/lib -lexpat" INSTALL_PROGRAM=/usr/local/bin/ginstall install
+```
 
 ## Download
 
